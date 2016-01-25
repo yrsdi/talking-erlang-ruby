@@ -16,7 +16,6 @@ receive do |f|
     # connect to twitter & post Hello World
     id.update("@yrsdi #{msg}" )
     f.send!([:result, "Tweet sent! Status : #{msg}"])
-
     f.receive_loop
   end
 end
