@@ -13,7 +13,6 @@ end
 
 receive do |f|
   f.when([:post, String]) do |msg|
-
     # connect to twitter & post Hello World
     id.update("@yrsdi #{msg}" )
     f.send!([:result, "Tweet sent! Status id: #{msg}"])
